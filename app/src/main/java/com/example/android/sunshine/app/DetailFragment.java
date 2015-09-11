@@ -170,6 +170,8 @@ public class DetailFragment extends Fragment
             String description = cursor.getString(COL_WEATHER_DESC);
             mDescriptionView.setText(description);
 
+            mIconView.setContentDescription(description);
+
             boolean isMetric = Utility.isMetric(getActivity());
 
             double high = cursor.getDouble(COL_WEATHER_MAX_TEMP);
